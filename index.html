@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Taking code to the next level with automated testing</title>
+	<meta name="description" content="Workshop for InspireWIT 2018">
+	<meta name="author" content="Aimee Gamble-Milner">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<style type="text/css">
+		body {
+			font-family: 'Source Sans Pro', sans-serif;
+			margin-bottom: 100px;
+		}
+
+		nav {
+			margin-bottom: 32px;
+		}
+
+		.jumbotron {
+			padding-top: 32px;
+			padding-bottom: 32px;
+		}
+
+		.code {
+			font-family: 'Source Code Pro', monospace;
+			display: inline-block;
+			color: red;
+			background: #eee;
+			padding: 3px;
+			font-size: 12px;
+		}
+
+		.about-me {
+			background: #eef0ee;
+			padding: 32px;
+			margin-bottom: 32px;
+			border-radius: 8px;
+		}
+
+		.about-me h1 {
+			margin-top: 0;
+			font-weight: 300;
+			font-size: 2em;
+		}
+
+		.me {
+			height: 100px;
+			border-radius: 50%;
+		}
+
+		.s4rb img {
+			margin-top: 16px;
+			width: 80px;
+		}
+
+		p.lead {
+			margin-bottom: 0;
+		}
+
+		.card {
+			margin-bottom: 32px;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
+			font-weight: 400;
+		}
+
+		pre {
+			border: 1px solid rgba(0,0,0,0.1);
+			background-color: rgba(0,0,0,0.05);
+			padding: 8px;
+			border-radius: 4px;
+			color: #333;
+		}
+
+		h1 span.number {
+			opacity: 0.25;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#">Automated Testing</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#intro">Introduction</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#examples">Examples</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#resources">Resources</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#tasks">Tasks</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="about-me">
+			<h1>About me</h1>
+			<div class="row">
+				<div class="col-sm-3 text-center">
+					<div>
+						<img class="me" src="http://gravatar.com/avatar/da05e6f07420cea88fdb5b23943577c4?s=200" />
+					</div>
+					<a href="http://www.s4rb.com" class="s4rb" target="_blank"><img src="http://www.s4rb.com/wp-content/uploads/2016/10/logo.png" /></a>
+				</div>
+				<div class="col-sm-9">
+					<p class="lead">
+						Aimee Gamble-Milner
+						<br />Software Engineer at <a href="https://www.s4rb.com" target="_blank">S4RB</a> (Solutions for Retail Brands)
+					</p>
+					<p>
+						Full-stack JavaScript Web Developer
+					</p>
+					<p>
+						Questions? <a href="http://twitter.com/aimeegamble" target="_blank">@aimeegamble</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="jumbotron" id="intro">
+			<h2>Why a workshop on testing?</h2>
+			<p>I was asked to do a workshop on building websites; however to me this is the key skill that differentiates good code from excellent code - the ability to write tests for your code. It both ensures that what you've written is robust and helps prevent
+				someone else from breaking it.</p>
+			<p>Automated testing can also be almost invisible - with tests being run automatically when changes are commited to a repo using CI and only impacting your work when tests fail to pass.</p>
+			<hr class="my-4">
+			<h2>What will this workshop cover?</h2>
+			<p>This workshop is designed to provide an introduction for using automated testing within software development, with a focus on:</p>
+			<ul>
+				<li>What functionality and features to test</li>
+				<li>Automated vs manual</li>
+				<li>Categorise tests by type</li>
+				<li>Write test statements</li>
+				<li>Write (almost) real tests for code</li>
+			</ul>
+			<p>Examples will be provided from a web-applciation context (as it's what I know best!)</p>
+			<p>Sorry - we won't be writing any <em>real</em> tests/code but will focus on working through methods using pseudo code.</p>
+		</div>
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title" id="examples">Examples</h5>
+				<p>In your groups, you will examine two sites from the following:</p>
+				<ul>
+					<li>A blogging platform</li>
+					<li>Social media site</li>
+					<li>Online store</li>
+					<li>Online brank</li>
+				</ul>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title" id="resources">Resources</h5>
+				<p>I'm mostly a node.js developer; these are the testing tools I use the most. There will be alternatives for other languages.</p>
+				<ul>
+					<li><a href="https://mochajs.org/#getting-started">Mocha</a> - a javscript testing framework. We will be writing tests using it's simple <span class="code">describe()</span> and <span class="code">it()</span> structure</li>
+					<li><a href="http://www.chaijs.com/api/bdd/">Chai</a> - a javscript assertion framework. We will be using chai's sentence based assertions to construct real assertions for tests</li>
+					<li><a href="https://eslint.org/">ESLint</a> - dont just test how codes executes but make sure how it's written meets your standards</li>
+					<li><a href="https://travis-ci.com/">Travis CI</a> - automatically run tests as part of Continuous Integration and Deployment on machines in the cloud. <b>Not JS specific</b></li>
+				</ul>
+				<p>
+					A selection of blogs posts and articles to help during the workshop or to look at afterwards.
+				</p>
+				<ul>
+					<li><a href="https://automationpanda.com/2017/10/14/bdd-101-unit-integration-and-end-to-end-tests/">BDD 101: Unit, Integration and end-to-end tests</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="jumbotron" id="tasks">
+		<div class="container">
+			<h1><span class="number">#1</span> What to test?</h1>
+			<p>For your two web applications: <b>List aspects of the application that you would test</b>. These can be:</p>
+			<ul>
+				<li>Features you can see on the page (e.g. navigation bar)</li>
+				<li>Things you can do (e.g. log in)</li>
+				<li>Things the application should do (e.g. page performance)</li>
+			</ul>
+			<p>Try to keep your tests relevant to the application - an online bank being secure would be more important than pixel-perfect images!</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1><span class="number">#2</span> Types of test</h1>
+		<p>For the tests you picked out in part 1, categorise them based on the type of test</p>
+		<ul>
+			<li>Unit test - testing a single "unit" of code</li>
+			<li>Integration test - testing multiple units of code interacting with each other</li>
+			<li>End to end tests - testing a workflow through the application</li>
+		</ul>
+		<p>You can also categorise them into:</p>
+		<ul>
+			<li>Manual testing only</li>
+			<li>Manual and automated testing</li>
+			<li>Automated testing only</li>
+		</ul>
+		<p>Think about the advantages and disadvantages to a human or machine testing each of your "tests"</p>
+		<p>If you do not have all three types of test, what else could you test that fits the missing types?</p>
+	</div>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1><span class="number">#3</span> Constructing description statements</h1>
+			<p>
+				Using the tests you identified and focusing on simple unit or integration tests:
+			</p>
+			<ol>
+				<li>transform each to a sentence with an assertion</li>
+				<li>group any tests together that test similar functions or units</li>
+				<li>what other assertions would you make about the feature or function?</li>
+			</ol>
+			<p>Testing a single unit or integration often will have many assertions - <b>sometimes tens to hundreds</b></p>
+			<h4>Examples:</h4>
+			<pre>
+describe: The shopping basket total cost
+	it: should equal the sum of all items in the basket
+	it: should equal zero when there are no items in the basket
+	it: should not include items "saved for later"
+	it: should automatically include delivery</pre>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1><span class="number">#4</span> Writing assertions (the tests)</h1>
+		<p>Using the chai should assertion framework, a vocabulary is provided. The key word is <b>should</b>.</p>
+		<p>Each member of the group should try to test a different feature (but do help each other out)</p>
+		<p><em>The following list is non-exhaustive</em></p>
+		<div class="chai">
+			<p>Chai should uses chainable language to construct assertions. Available connecting language is:</p>
+			<span>be</span>
+			<span>that</span>
+			<span>which</span>
+			<span>and</span>
+			<span>have</span>
+			<p>The following allow you to construct assertions and are mostly self-explanatory (see the documentation for more information)</p>
+			<span>not</span>
+			<span>a(<i>type</i>)</span>
+			<span>equal(<i>value</i>)</span>
+			<span>above(<i>value</i>)</span>
+			<span>below(<i>value</i>)</span>
+			<span>within(<i>lower limt</i>, <i>upper limt</i>)</span>
+			<span>true</span>
+			<span>false</span>
+		</div>
+		<p>Write any "code" as pseudo-code. The idea of this workshop is not to write real, working code but tests that cover the functionality to be tested</p>
+		<pre>
+var basket = [10, 15, 5];
+var delivery = 3;
+
+describe: basket price calculation
+	it: should calculate the price correctly
+		total(basket, delivery).should.be.a('number').and.equal(33);
+	it: should calculate VAT correctly
+		vat(basket, delivery).should.be.a('number').and.equal(6.6);
+	it: should not charge VAT to channel islands
+		vat(basket, delivery, 'GY1 1AA').should.be.a('number').and.equal(0);</pre>
+		<pre>
+describe: login validation
+	it: should validate the login with correct credentials
+		validLogin(username = 'bob', password = 'bobs correct password').should.equal(true);
+	it should not validate incorrect credentials
+		validLogin(username = 'bob', password = 'not bobs password').should.not.be.true;
+
+describe: the login method
+	it: should return 'success' with the correct credentials
+		login(username = 'bob', password = 'bobs correct password').should.equal('success');</pre>
+		<p>Am I bothered if you are writing valid code or assertions? No! This code won't be run and the aim here is to think in the correct way to test!</p>
+		<p>Use you own knowledge of code to make your tests more thorough - including testing more complicated methods or returned values</p>
+	</div>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1><span class="number">#5</span> Peer review</h1>
+			<p>An important part of writing code is <b>peer review</b>.</p>
+			<ul>
+				<li>Pair up with someone not in your group (preferably someone you don't know)</li>
+				<li>Describe your site and explain your assertions to them</li>
+				<li>Provide feedback on the assertions - try to think of use cases not covered or potential problems not covered by the tests (e.g. division by zero)</li>
+				<li>Feedback on your feedback - do you agree to the changes to your tests?</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1>Finish up</h1>
+		<p>Keep it simple: On a post it note: what has stuck with you from this workshop? What are you going to take away? What are you going to look up?</p>
+		<p>Just write one thing!</p>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
